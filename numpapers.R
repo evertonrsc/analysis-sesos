@@ -26,4 +26,4 @@ barchart <- ggplot(data, aes(fill=acceptance, y=numpapers, x=editions)) + labs(x
 barchart
 
 # Save to file
-ggsave("numpapers.png", plot=barchart, device="png", dpi="print")
+ggsave("plots/numpapers.png", plot=barchart, device="png", dpi="print")

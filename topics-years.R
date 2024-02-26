@@ -24,4 +24,4 @@ bubblechart <- ggplot(grid[which(grid$radius > 0),], aes(as.character(years), to
 bubblechart
 
 # Save to file
-ggsave("topics-years.png", plot=bubblechart, device="png", dpi="print")
+ggsave("plots/topics-years.png", plot=bubblechart, device="png", dpi="print")

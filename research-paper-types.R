@@ -15,4 +15,4 @@ barchart <- ggplot(grid[which(numpapers>0),], aes(x=factor(research_types), y=nu
 barchart
 
 # Save to file
-ggsave("research-paper-types.png", plot=barchart, device="png", dpi="print")
+ggsave("plots/research-paper-types.png", plot=barchart, device="png", dpi="print")

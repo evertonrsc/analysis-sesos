@@ -12,4 +12,4 @@ data <- data.frame(sostypes, numpapers)
 piechart <- ggpie(data, "numpapers", label=percent(data$numpapers/sum(numpapers), accuracy=.1), fill="sostypes") + theme(legend.position="none", legend.justification="center", legend.box.spacing=unit(-5, "pt"), legend.title=element_text(size=10, face="bold"), legend.text=element_text(size=10), axis.text.x=element_text(size=11)) + guides(fill=guide_legend(title="SoS types")) + scale_fill_tableau(palette = "Tableau 20")
 piechart
 
-ggarrange(piechart) %>% ggexport(filename="sostypes.png")
+ggarrange(piechart) %>% ggexport(filename="plots/sostypes.png")

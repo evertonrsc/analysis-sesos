@@ -13,4 +13,4 @@ barchart <- ggplot(data, aes(x=topics, y=numpapers)) + geom_bar(stat="identity",
 barchart
 
 # Save to file
-ggsave("se-topics.png", plot=barchart, device="png", dpi="print")
+ggsave("plots/se-topics.png", plot=barchart, device="png", dpi="print")

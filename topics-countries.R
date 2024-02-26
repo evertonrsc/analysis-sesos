@@ -33,4 +33,4 @@ bubblechart <- ggplot(grid[which(grid$radius > 0),], aes(countries, topics)) + g
 bubblechart
 
 # Save to file
-ggsave("topics-countries.png", plot=bubblechart, device="png", dpi="print")
+ggsave("plots/topics-countries.png", plot=bubblechart, device="png", dpi="print")

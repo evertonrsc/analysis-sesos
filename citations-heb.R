@@ -84,4 +84,4 @@ edgebundle <- ggraph(graph_, layout="dendrogram", circular=TRUE) +
 
 # Save to file
 edgebundle
-ggsave("citations-heb.png", plot=edgebundle, width=8.8, height=8.3, device="png", dpi="print")
+ggsave("plots/citations-heb.png", plot=edgebundle, width=8.8, height=8.3, device="png", dpi="print")

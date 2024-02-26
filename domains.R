@@ -12,5 +12,5 @@ data <- data.frame(domains, numpapers)
 piechart <- ggpie(data, "numpapers", label=percent(data$numpapers/sum(numpapers), accuracy=.1), fill="domains") + theme(legend.position="right", legend.box.spacing=unit(12, "pt"), legend.title=element_text(size=10, face="bold"), legend.text=element_text(size=10), axis.text.x=element_text(size=8.5)) + guides(fill=guide_legend(title="Application domains or contexts")) + scale_fill_tableau(palette = "Classic Cyclic")
 piechart
 
-ggarrange(piechart) %>% ggexport(filename="domains.png")
+ggarrange(piechart) %>% ggexport(filename="plots/domains.png")
 
