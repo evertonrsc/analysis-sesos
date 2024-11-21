@@ -5,7 +5,7 @@ library(RColorBrewer)
 
 # Dataset
 research_types <- c("Validation", "Evaluation", "Solution proposal", "Philosophical", "Opinion", "Experience", "Secondary study")
-numpapers <- c(10, 6, 13, 15, 1, 3, 9)
+numpapers <- c(13, 7, 15, 15, 1, 3, 10)
 data <- data.frame(research_types, numpapers)
 
 # Bar chart

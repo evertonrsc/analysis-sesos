@@ -6,8 +6,8 @@ library(ggthemes)
 # Dataset
 research_types <- c("Validation", "Evaluation", "Solution proposal", "Philosophical", "Opinion", "Experience", "Secondary study")
 paper_types <- rep(c("Regular paper", "Short/position paper"), each=7)
-numpapers <- c(9, 5, 7, 4, 0, 3, 9,
-               1, 1, 6, 11, 1, 0, 0)
+numpapers <- c(11, 6, 7, 4, 0, 3, 10,
+               2, 1, 8, 11, 1, 0, 0)
 grid <- data.frame(research_types, paper_types, numpapers)
 
 # Barchart
