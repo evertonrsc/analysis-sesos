@@ -1,17 +1,16 @@
 # https://r-graph-gallery.com/309-intro-to-hierarchical-edge-bundling.html
 # https://r-graph-gallery.com/310-custom-hierarchical-edge-bundling.html
 
-install.packages("ggraph")
-install.packages("igraph")
-install.packages("RColorBrewer")
+# Install (if not installed) and load required packages
+packages <- c("ggraph", "igraph", "RColorBrewer")
+install.packages(setdiff(packages, rownames(installed.packages())))
+invisible(lapply(packages, library, character.only = TRUE))
 
-library(ggraph)
-library(igraph)
-library(RColorBrewer)
-
+# Set current directory as work directory
 setwd(".")
 
 # Create hierarchy: root -> years (2013-2024) -> papers (Pn)
+# arg 'times' corresponds to the number of papers for the year
 years <- data.frame(from="root", to=seq(2013,2024))
 papers <- data.frame(from=c(
   rep(2013, times=9),
@@ -44,7 +43,7 @@ hierarchy <- rbind(years, papers)
 
 # Create a dataframe with connection between leaves (individuals)
 # Adjacency matrix comes from a CSV file
-all_leaves <- paste("P", seq(1,64), sep="")
+all_leaves <- paste("P", seq(1,nrow(papers)), sep="")
 connect <- read.csv("data/crossref.csv", header=FALSE)
 colnames(connect) <- c("citing", "cited")
 
